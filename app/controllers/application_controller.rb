@@ -1,4 +1,6 @@
-class ApplicationController < ActionController::API
+# Used to be ActionController::API
+# Which means you have to include ActionController::ImplicitRender in the class
+class ApplicationController < ActionController::Base
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   before_filter :authenticate_user_from_token!

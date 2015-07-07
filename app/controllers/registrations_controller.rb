@@ -11,6 +11,12 @@ class RegistrationsController < Devise::RegistrationsController
   # errors e.g. {"errors":{"email":["is invalid"],"password":["is too short (minimum is 8 characters)"]}}
 
   # def create
-  #   return
+  #   super do |user|
+  #     data = {
+  #       token:      user.authentication_token,
+  #       email: user.email
+  #     }
+  #     render json: data, status: 201 and return
+  #   end
   # end
 end  
